@@ -9,9 +9,7 @@ COPY ./requirements.txt /code/requirements.txt
 COPY ./README.md /code/README.md
 COPY ./src /code/src
 
-RUN chown -R appuser:appuser /code
-
-RUN pip install /code
+RUN chown -R appuser:appuser /code && pip install /code
 
 COPY ./controller /code/controller
 
